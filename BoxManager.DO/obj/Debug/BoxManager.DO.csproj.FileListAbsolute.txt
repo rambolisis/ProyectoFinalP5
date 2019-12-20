@@ -1,0 +1,9 @@
+C:\Users\rug18\Documents\BoxManager-Progra5\BoxManager.DO\bin\Debug\BoxManager.DO.dll
+C:\Users\rug18\Documents\BoxManager-Progra5\BoxManager.DO\bin\Debug\BoxManager.DO.pdb
+C:\Users\rug18\Documents\BoxManager-Progra5\BoxManager.DO\obj\Debug\BoxManager.DO.dll
+C:\Users\rug18\Documents\BoxManager-Progra5\BoxManager.DO\obj\Debug\BoxManager.DO.pdb
+C:\Sources\BoxManager-Progra5\BoxManager.DO\bin\Debug\BoxManager.DO.dll
+C:\Sources\BoxManager-Progra5\BoxManager.DO\bin\Debug\BoxManager.DO.pdb
+C:\Sources\BoxManager-Progra5\BoxManager.DO\obj\Debug\BoxManager.DO.csproj.CoreCompileInputs.cache
+C:\Sources\BoxManager-Progra5\BoxManager.DO\obj\Debug\BoxManager.DO.dll
+C:\Sources\BoxManager-Progra5\BoxManager.DO\obj\Debug\BoxManager.DO.pdb

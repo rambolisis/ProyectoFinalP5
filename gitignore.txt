@@ -1,0 +1,10 @@
+.vs/
+packages/
+BoxManager.BS/bin/
+BoxManager.BS/obj/
+BoxManager.DAL/bin/
+BoxManager.DAL/obj/
+BoxManager.DO/bin/
+BoxManager.DO/obj/
+BoxManager.UI/bin/
+BoxManager.UI/obj/

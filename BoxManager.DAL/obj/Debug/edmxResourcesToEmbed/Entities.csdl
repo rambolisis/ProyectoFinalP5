@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BoxManagerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="administrador">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="usuario" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="contrasenia" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="idTenant" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tenant" Relationship="Self.FK__administr__idTen__4BAC3F29" FromRole="administrador" ToRole="tenant" />
+  </EntityType>
+  <EntityType Name="cliente">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="nivel" Type="Int32" />
+    <Property Name="idTenant" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tenant" Relationship="Self.FK__cliente__idTenan__52593CB8" FromRole="cliente" ToRole="tenant" />
+    <NavigationProperty Name="nivel1" Relationship="Self.FK__cliente__nivel__5165187F" FromRole="cliente" ToRole="nivel" />
+    <NavigationProperty Name="wodClientes" Relationship="Self.FK__wodClient__clien__5CD6CB2B" FromRole="cliente" ToRole="wodCliente" />
+  </EntityType>
+  <EntityType Name="nivel">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="idTenant" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="clientes" Relationship="Self.FK__cliente__nivel__5165187F" FromRole="nivel" ToRole="cliente" />
+    <NavigationProperty Name="tenant" Relationship="Self.FK__nivel__idTenant__4E88ABD4" FromRole="nivel" ToRole="tenant" />
+    <NavigationProperty Name="wods" Relationship="Self.FK__wod__nivel__5812160E" FromRole="nivel" ToRole="wod" />
+  </EntityType>
+  <EntityType Name="tenant">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="administradors" Relationship="Self.FK__administr__idTen__4BAC3F29" FromRole="tenant" ToRole="administrador" />
+    <NavigationProperty Name="clientes" Relationship="Self.FK__cliente__idTenan__52593CB8" FromRole="tenant" ToRole="cliente" />
+    <NavigationProperty Name="nivels" Relationship="Self.FK__nivel__idTenant__4E88ABD4" FromRole="tenant" ToRole="nivel" />
+    <NavigationProperty Name="tipoConteos" Relationship="Self.FK__tipoConte__idTen__5535A963" FromRole="tenant" ToRole="tipoConteo" />
+    <NavigationProperty Name="wods" Relationship="Self.FK__wod__idTenant__59FA5E80" FromRole="tenant" ToRole="wod" />
+    <NavigationProperty Name="wodClientes" Relationship="Self.FK__wodClient__idTen__5EBF139D" FromRole="tenant" ToRole="wodCliente" />
+  </EntityType>
+  <EntityType Name="tipoConteo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="idTenant" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tenant" Relationship="Self.FK__tipoConte__idTen__5535A963" FromRole="tipoConteo" ToRole="tenant" />
+    <NavigationProperty Name="wods" Relationship="Self.FK__wod__tipoConteo__59063A47" FromRole="tipoConteo" ToRole="wod" />
+    <NavigationProperty Name="wodClientes" Relationship="Self.FK__wodClient__tipoC__5DCAEF64" FromRole="tipoConteo" ToRole="wodCliente" />
+  </EntityType>
+  <EntityType Name="wod">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fecha" Type="DateTime" Precision="0" />
+    <Property Name="descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="nivel" Type="Int32" />
+    <Property Name="tipoConteo" Type="Int32" />
+    <Property Name="idTenant" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="nivel1" Relationship="Self.FK__wod__nivel__5812160E" FromRole="wod" ToRole="nivel" />
+    <NavigationProperty Name="tenant" Relationship="Self.FK__wod__idTenant__59FA5E80" FromRole="wod" ToRole="tenant" />
+    <NavigationProperty Name="tipoConteo1" Relationship="Self.FK__wod__tipoConteo__59063A47" FromRole="wod" ToRole="tipoConteo" />
+  </EntityType>
+  <EntityType Name="wodCliente">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fecha" Type="DateTime" Precision="0" />
+    <Property Name="descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="cliente" Type="Int32" />
+    <Property Name="tipoConteo" Type="Int32" />
+    <Property Name="idTenant" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="cliente1" Relationship="Self.FK__wodClient__clien__5CD6CB2B" FromRole="wodCliente" ToRole="cliente" />
+    <NavigationProperty Name="tenant" Relationship="Self.FK__wodClient__idTen__5EBF139D" FromRole="wodCliente" ToRole="tenant" />
+    <NavigationProperty Name="tipoConteo1" Relationship="Self.FK__wodClient__tipoC__5DCAEF64" FromRole="wodCliente" ToRole="tipoConteo" />
+  </EntityType>
+  <Association Name="FK__administr__idTen__4BAC3F29">
+    <End Role="tenant" Type="Self.tenant" Multiplicity="1" />
+    <End Role="administrador" Type="Self.administrador" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tenant">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="administrador">
+        <PropertyRef Name="idTenant" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__cliente__idTenan__52593CB8">
+    <End Role="tenant" Type="Self.tenant" Multiplicity="1" />
+    <End Role="cliente" Type="Self.cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tenant">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cliente">
+        <PropertyRef Name="idTenant" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__cliente__nivel__5165187F">
+    <End Role="nivel" Type="Self.nivel" Multiplicity="0..1" />
+    <End Role="cliente" Type="Self.cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="nivel">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cliente">
+        <PropertyRef Name="nivel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__wodClient__clien__5CD6CB2B">
+    <End Role="cliente" Type="Self.cliente" Multiplicity="0..1" />
+    <End Role="wodCliente" Type="Self.wodCliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cliente">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="wodCliente">
+        <PropertyRef Name="cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__nivel__idTenant__4E88ABD4">
+    <End Role="tenant" Type="Self.tenant" Multiplicity="1" />
+    <End Role="nivel" Type="Self.nivel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tenant">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="nivel">
+        <PropertyRef Name="idTenant" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__wod__nivel__5812160E">
+    <End Role="nivel" Type="Self.nivel" Multiplicity="0..1" />
+    <End Role="wod" Type="Self.wod" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="nivel">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="wod">
+        <PropertyRef Name="nivel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tipoConte__idTen__5535A963">
+    <End Role="tenant" Type="Self.tenant" Multiplicity="1" />
+    <End Role="tipoConteo" Type="Self.tipoConteo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tenant">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tipoConteo">
+        <PropertyRef Name="idTenant" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__wod__idTenant__59FA5E80">
+    <End Role="tenant" Type="Self.tenant" Multiplicity="1" />
+    <End Role="wod" Type="Self.wod" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tenant">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="wod">
+        <PropertyRef Name="idTenant" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__wodClient__idTen__5EBF139D">
+    <End Role="tenant" Type="Self.tenant" Multiplicity="1" />
+    <End Role="wodCliente" Type="Self.wodCliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tenant">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="wodCliente">
+        <PropertyRef Name="idTenant" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__wod__tipoConteo__59063A47">
+    <End Role="tipoConteo" Type="Self.tipoConteo" Multiplicity="0..1" />
+    <End Role="wod" Type="Self.wod" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tipoConteo">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="wod">
+        <PropertyRef Name="tipoConteo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__wodClient__tipoC__5DCAEF64">
+    <End Role="tipoConteo" Type="Self.tipoConteo" Multiplicity="0..1" />
+    <End Role="wodCliente" Type="Self.wodCliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tipoConteo">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="wodCliente">
+        <PropertyRef Name="tipoConteo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BoxManagerEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="administradors" EntityType="Self.administrador" />
+    <EntitySet Name="clientes" EntityType="Self.cliente" />
+    <EntitySet Name="nivels" EntityType="Self.nivel" />
+    <EntitySet Name="tenants" EntityType="Self.tenant" />
+    <EntitySet Name="tipoConteos" EntityType="Self.tipoConteo" />
+    <EntitySet Name="wods" EntityType="Self.wod" />
+    <EntitySet Name="wodClientes" EntityType="Self.wodCliente" />
+    <AssociationSet Name="FK__administr__idTen__4BAC3F29" Association="Self.FK__administr__idTen__4BAC3F29">
+      <End Role="tenant" EntitySet="tenants" />
+      <End Role="administrador" EntitySet="administradors" />
+    </AssociationSet>
+    <AssociationSet Name="FK__cliente__idTenan__52593CB8" Association="Self.FK__cliente__idTenan__52593CB8">
+      <End Role="tenant" EntitySet="tenants" />
+      <End Role="cliente" EntitySet="clientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__cliente__nivel__5165187F" Association="Self.FK__cliente__nivel__5165187F">
+      <End Role="nivel" EntitySet="nivels" />
+      <End Role="cliente" EntitySet="clientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__wodClient__clien__5CD6CB2B" Association="Self.FK__wodClient__clien__5CD6CB2B">
+      <End Role="cliente" EntitySet="clientes" />
+      <End Role="wodCliente" EntitySet="wodClientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__nivel__idTenant__4E88ABD4" Association="Self.FK__nivel__idTenant__4E88ABD4">
+      <End Role="tenant" EntitySet="tenants" />
+      <End Role="nivel" EntitySet="nivels" />
+    </AssociationSet>
+    <AssociationSet Name="FK__wod__nivel__5812160E" Association="Self.FK__wod__nivel__5812160E">
+      <End Role="nivel" EntitySet="nivels" />
+      <End Role="wod" EntitySet="wods" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tipoConte__idTen__5535A963" Association="Self.FK__tipoConte__idTen__5535A963">
+      <End Role="tenant" EntitySet="tenants" />
+      <End Role="tipoConteo" EntitySet="tipoConteos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__wod__idTenant__59FA5E80" Association="Self.FK__wod__idTenant__59FA5E80">
+      <End Role="tenant" EntitySet="tenants" />
+      <End Role="wod" EntitySet="wods" />
+    </AssociationSet>
+    <AssociationSet Name="FK__wodClient__idTen__5EBF139D" Association="Self.FK__wodClient__idTen__5EBF139D">
+      <End Role="tenant" EntitySet="tenants" />
+      <End Role="wodCliente" EntitySet="wodClientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__wod__tipoConteo__59063A47" Association="Self.FK__wod__tipoConteo__59063A47">
+      <End Role="tipoConteo" EntitySet="tipoConteos" />
+      <End Role="wod" EntitySet="wods" />
+    </AssociationSet>
+    <AssociationSet Name="FK__wodClient__tipoC__5DCAEF64" Association="Self.FK__wodClient__tipoC__5DCAEF64">
+      <End Role="tipoConteo" EntitySet="tipoConteos" />
+      <End Role="wodCliente" EntitySet="wodClientes" />
+    </AssociationSet>
+    <FunctionImport Name="wods1" ReturnType="Collection(BoxManagerModel.wods1_Result)">
+      <Parameter Name="idTenant" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="wodsCliente" ReturnType="Collection(BoxManagerModel.wodsCliente_Result)">
+      <Parameter Name="idTenant" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="wods1_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="DateTime" Name="Fecha" Nullable="true" />
+    <Property Type="String" Name="Nivel" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Tipo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Descripcion" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="wodsCliente_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="DateTime" Name="Fecha" Nullable="true" />
+    <Property Type="String" Name="Cliente" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Tipo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Descripcion" Nullable="true" />
+  </ComplexType>
+</Schema>

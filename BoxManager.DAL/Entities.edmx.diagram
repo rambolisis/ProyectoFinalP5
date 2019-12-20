@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0aca11d51ef9414dbe367d57ad7f32a7" Name="Diagram1">
+        <EntityTypeShape EntityType="BoxManagerModel.administrador" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoxManagerModel.cliente" Width="1.5" PointX="5.25" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoxManagerModel.nivel" Width="1.5" PointX="3" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoxManagerModel.tenant" Width="1.5" PointX="0.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoxManagerModel.tipoConteo" Width="1.5" PointX="3" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoxManagerModel.wod" Width="1.5" PointX="5.25" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoxManagerModel.wodCliente" Width="1.5" PointX="7.5" PointY="9" IsExpanded="true" />
+        <AssociationConnector Association="BoxManagerModel.FK__administr__idTen__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="BoxManagerModel.FK__cliente__idTenan__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="BoxManagerModel.FK__cliente__nivel__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="BoxManagerModel.FK__wodClient__clien__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="BoxManagerModel.FK__nivel__idTenant__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="BoxManagerModel.FK__wod__nivel__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="BoxManagerModel.FK__tipoConte__idTen__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="BoxManagerModel.FK__wod__idTenant__59FA5E80" ManuallyRouted="false" />
+        <AssociationConnector Association="BoxManagerModel.FK__wodClient__idTen__5EBF139D" ManuallyRouted="false" />
+        <AssociationConnector Association="BoxManagerModel.FK__wod__tipoConteo__59063A47" ManuallyRouted="false" />
+        <AssociationConnector Association="BoxManagerModel.FK__wodClient__tipoC__5DCAEF64" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
