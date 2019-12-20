@@ -1,0 +1,5 @@
+C:\Users\frank\Documents\ProyectoFinalP5\BoxManager.DO\bin\Release\BoxManager.DO.dll
+C:\Users\frank\Documents\ProyectoFinalP5\BoxManager.DO\bin\Release\BoxManager.DO.pdb
+C:\Users\frank\Documents\ProyectoFinalP5\BoxManager.DO\obj\Release\BoxManager.DO.csprojAssemblyReference.cache
+C:\Users\frank\Documents\ProyectoFinalP5\BoxManager.DO\obj\Release\BoxManager.DO.dll
+C:\Users\frank\Documents\ProyectoFinalP5\BoxManager.DO\obj\Release\BoxManager.DO.pdb

@@ -25,3 +25,16 @@ C:\Sources\BoxManager-Progra5\BoxManager.DAL\obj\Debug\BoxManager.DAL.csproj.Cor
 C:\Sources\BoxManager-Progra5\BoxManager.DAL\obj\Debug\BoxManager.DAL.csproj.CopyComplete
 C:\Sources\BoxManager-Progra5\BoxManager.DAL\obj\Debug\BoxManager.DAL.dll
 C:\Sources\BoxManager-Progra5\BoxManager.DAL\obj\Debug\BoxManager.DAL.pdb
+C:\Users\frank\Documents\ProyectoFinalP5\BoxManager.DAL\bin\Debug\BoxManager.DAL.dll.config
+C:\Users\frank\Documents\ProyectoFinalP5\BoxManager.DAL\bin\Debug\BoxManager.DAL.dll
+C:\Users\frank\Documents\ProyectoFinalP5\BoxManager.DAL\bin\Debug\BoxManager.DAL.pdb
+C:\Users\frank\Documents\ProyectoFinalP5\BoxManager.DAL\bin\Debug\BoxManager.DO.dll
+C:\Users\frank\Documents\ProyectoFinalP5\BoxManager.DAL\bin\Debug\EntityFramework.dll
+C:\Users\frank\Documents\ProyectoFinalP5\BoxManager.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\frank\Documents\ProyectoFinalP5\BoxManager.DAL\bin\Debug\BoxManager.DO.pdb
+C:\Users\frank\Documents\ProyectoFinalP5\BoxManager.DAL\bin\Debug\EntityFramework.xml
+C:\Users\frank\Documents\ProyectoFinalP5\BoxManager.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\frank\Documents\ProyectoFinalP5\BoxManager.DAL\obj\Debug\BoxManager.DAL.csprojAssemblyReference.cache
+C:\Users\frank\Documents\ProyectoFinalP5\BoxManager.DAL\obj\Debug\BoxManager.DAL.csproj.CopyComplete
+C:\Users\frank\Documents\ProyectoFinalP5\BoxManager.DAL\obj\Debug\BoxManager.DAL.dll
+C:\Users\frank\Documents\ProyectoFinalP5\BoxManager.DAL\obj\Debug\BoxManager.DAL.pdb

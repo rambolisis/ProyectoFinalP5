@@ -1,0 +1,51 @@
+﻿@model List<BoxManager.BS.Models.WodModel>
+<link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+
+@{
+    ViewBag.Title = "Wods";
+}
+
+<h2>Students</h2>
+
+<p>
+    @Html.ActionLink("Crear", "Modificar")
+</p>
+<table>
+    <tr>
+        <th>
+            Descripcion
+        </th>
+        <th>
+            Fecha
+        </th>
+        <th>
+            Nivel
+        </th>
+        <th>
+            Tipo de Conteo
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fecha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nivel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoConteo)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Modificar", new {id = item.Id}) |
+                @Html.ActionLink("Borrar", "Borrar", new {id = item.Id}, new { onclick = "return confirm('¿Está seguro de eliminar este Wod?');" })
+            </td>
+        </tr>
+    }
+</table>
