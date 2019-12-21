@@ -11,3 +11,16 @@ C:\Users\frank\Documents\ProyectoFinalP5\BoxManager.DAL\obj\Release\BoxManager.D
 C:\Users\frank\Documents\ProyectoFinalP5\BoxManager.DAL\obj\Release\BoxManager.DAL.csproj.CopyComplete
 C:\Users\frank\Documents\ProyectoFinalP5\BoxManager.DAL\obj\Release\BoxManager.DAL.dll
 C:\Users\frank\Documents\ProyectoFinalP5\BoxManager.DAL\obj\Release\BoxManager.DAL.pdb
+C:\Users\rug18\Documents\ProyectoFinalP5\BoxManager.DAL\bin\Release\BoxManager.DAL.dll.config
+C:\Users\rug18\Documents\ProyectoFinalP5\BoxManager.DAL\bin\Release\BoxManager.DAL.dll
+C:\Users\rug18\Documents\ProyectoFinalP5\BoxManager.DAL\bin\Release\BoxManager.DAL.pdb
+C:\Users\rug18\Documents\ProyectoFinalP5\BoxManager.DAL\bin\Release\BoxManager.DO.dll
+C:\Users\rug18\Documents\ProyectoFinalP5\BoxManager.DAL\bin\Release\EntityFramework.dll
+C:\Users\rug18\Documents\ProyectoFinalP5\BoxManager.DAL\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\rug18\Documents\ProyectoFinalP5\BoxManager.DAL\bin\Release\BoxManager.DO.pdb
+C:\Users\rug18\Documents\ProyectoFinalP5\BoxManager.DAL\bin\Release\EntityFramework.xml
+C:\Users\rug18\Documents\ProyectoFinalP5\BoxManager.DAL\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\rug18\Documents\ProyectoFinalP5\BoxManager.DAL\obj\Release\BoxManager.DAL.csprojAssemblyReference.cache
+C:\Users\rug18\Documents\ProyectoFinalP5\BoxManager.DAL\obj\Release\BoxManager.DAL.csproj.CopyComplete
+C:\Users\rug18\Documents\ProyectoFinalP5\BoxManager.DAL\obj\Release\BoxManager.DAL.dll
+C:\Users\rug18\Documents\ProyectoFinalP5\BoxManager.DAL\obj\Release\BoxManager.DAL.pdb
